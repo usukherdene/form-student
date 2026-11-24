@@ -14,11 +14,11 @@ export const Stepper = ({step}: StepperProps) => {
         <StepLine filled={step > 2}/>
         </div>
         
-        {/* <div className="flex items-center justify-between">
+        <div className="absolute inset-x-0 top-[-14px] flex items-center justify-between">
             {STEPS.map(({ Icon, label }, index) => ( 
-                <StepIndicator key={index} Icon={Icon} label={label}/> 
+                <StepIndicator key={index} Icon={Icon} label={label} number={index + 1} step={step}/> 
             ))}
-        </div> */}
+        </div>
     </div>
   )
 }
