@@ -2,10 +2,8 @@
 
 import { Card, CardContent } from "@/app/components/ui/card";
 import { Stepper } from "@/app/components/register/stepper/Stepper"
-import React, { useState, SubmitEvent } from "react";
+import React, { useState, FormEvent } from "react";
 import { RegisterActions } from "./RegisterActions";
-import next from "next";
-import { previousDay } from "date-fns";
 
 export const RegisterForm = () => {
   const [step, setStep] = useState<FormStep>(0);
@@ -15,8 +13,8 @@ export const RegisterForm = () => {
     setStep(previousStep)
   }
 
-  const handleSubmit = (event:React.SubmitEvent<HTMLFormElement>) => {
-    event.preventDefault;
+  const handleSubmit = (event:React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
     const nextStep = step === 0 ? 1 : 2
 
