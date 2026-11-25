@@ -2,7 +2,7 @@ import React from 'react'
 import { Field, FieldLabel, FieldError } from '../../ui/field'
 import { Input } from '../../ui/input'
 
-export const EmailInput = () => {
+export const EmailInput = ({control}: RegistrationFieldProps) => {
   return (
     <Field>
       <FieldLabel htmlFor="username">Username</FieldLabel>

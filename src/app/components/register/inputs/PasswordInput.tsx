@@ -2,7 +2,7 @@ import React from 'react'
 import { Field, FieldLabel, FieldError } from '../../ui/field'
 import { Input } from '../../ui/input'
 
-export const PasswordInput = () => {
+export const PasswordInput = ({control, name}: RegistrationFieldProps) => {
   return (
     <Field>
       <FieldLabel htmlFor="username">Username</FieldLabel>

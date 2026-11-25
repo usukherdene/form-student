@@ -1,13 +1,20 @@
-import React from 'react'
+import { useController } from 'react-hook-form'
 import { Field, FieldLabel, FieldError } from '../../ui/field'
 import { Input } from '../../ui/input'
+import { fi } from 'date-fns/locale'
 
-export const NameInput = () => {
+export const NameInput = ({control, name}: RegistrationFieldProps) => {
+  const {field, fieldState} = useController({ control, name})
+
+  const isFirstName = field.name === "firstName";
+
   return (
-    <Field>
-      <FieldLabel htmlFor="username">Username</FieldLabel>
-      <Input id="username" autoComplete="off" aria-invalid />
-      <FieldError>Choose another username.</FieldError>
+    <Field className={fieldState.invalid ? "text-[#E7000B] gap-2" : "gap-2"}>
+      <FieldLabel htmlFor="username">{isFirstName ? "First name" : "Last name"}</FieldLabel>
+
+      <Input id={field.name} {...field} />
+
+      <FieldError>{fieldState.error?.message}</FieldError>
     </Field>
   )
 }

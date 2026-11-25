@@ -19,7 +19,7 @@ export const RegisterForm = () => {
 
   const [step, setStep] = useState<FormStep>(0);
 
-  const submit = () => {
+  const submit = (values: RegisterValues) => {
     setStep(3);
   };
 

@@ -4,9 +4,9 @@ import { DateOfBirthInput, PhoneNumberInput, ProfileImageInput } from '../regist
 export const StepProfile = ({ form }: StepComponentsProps) => {
   return (
     <div className="space-y-5">
-      <PhoneNumberInput />
-      <DateOfBirthInput />
-      <ProfileImageInput />
+      <PhoneNumberInput control={form.control} name="phoneNumber"/>
+      <DateOfBirthInput control={form.control} name="dateOfBirth"/>
+      <ProfileImageInput control={form.control} name="profileImage"/>
     </div>
   )
 }
