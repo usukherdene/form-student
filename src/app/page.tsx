@@ -5,12 +5,40 @@ import { LaserFooter } from "@/app/components/LaserFooter";
 import SplashCursor from "@/app/components/animated/SplashCursor";
 import GlassSurface from "@/app/components/animated/GlassSurface";
 import { RegisterForm } from "@/app/components/register/form/RegisterForm";
+import NeonGlyphs from '@/app/components/animated/NeonGlyphs';
 
 const headline = "Every great story\nbegins with a name.\nLet this be the start\nof yours.";
 
 const Home = () => {
   return (
     <div className="isolate mx-auto flex min-h-screen w-full max-w-344 flex-col px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      {/* <div style={{ width: '100vw', height: '100vh', position: 'absolute' }} className="inset-0">
+      <NeonGlyphs
+                colors={["#ffffff", "#ea6fe0", "#7c3aed", "#d351b6", "#5aaef0"]}
+                cellSize={16}
+                depth={12}
+                tilt={25}
+                turn={0}
+                perspective={60}
+                sway={0.5}
+                density={0.1}
+                speed={0.15}
+                trails={0.25}
+                glow={0.75}
+                scramble={0.5}
+                fade={0.75}
+                aberration={0.5}
+                mouseInteraction
+                burstOnClick
+                characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&*+=<>?!"
+                rotation={0}
+                flicker={0.5}
+                brightness={0.5}
+                variation={0}
+                opacity={1}
+                intro
+                lightMode={false} dpr={undefined}/>
+      </div> */}
       <SplashCursor colors={["#9955ff", "#ce96ff", "#7b72ff"]} rainbow={false} quality="low" glow={0.35} intro={false} zIndex={-1} style={{ opacity: 0.8 }} />
       <header className="relative z-1 flex items-center border-b border-[#cab0ef24] py-2 lg:py-4">
         <Link href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tight">
@@ -50,7 +78,7 @@ const Home = () => {
         </div>
       </main>
 
-      {/* <LaserFooter year={new Date().getFullYear()} /> */}
+      <LaserFooter year={new Date().getFullYear()} />
     </div>
   );
 };

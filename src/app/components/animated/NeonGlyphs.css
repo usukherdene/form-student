@@ -1,12 +1,11 @@
-.side-rays {
+.neon-glyphs-container {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  pointer-events: none;
 }
 
-.side-rays__canvas {
+.neon-glyphs-canvas {
   position: absolute;
   inset: 0;
   display: block;
