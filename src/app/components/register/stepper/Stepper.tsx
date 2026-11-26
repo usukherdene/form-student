@@ -1,6 +1,7 @@
 import { StepLine } from "./StepLine"
 import { StepIndicator } from "./StepIndicator"
 import { STEPS } from "@/app/constants"
+import { copy } from "@/app/constants"
 
 type StepperProps = {
     step: number;

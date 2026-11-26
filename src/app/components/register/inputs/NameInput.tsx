@@ -1,7 +1,6 @@
 import { useController } from 'react-hook-form'
 import { Field, FieldLabel, FieldError } from '../../ui/field'
 import { Input } from '../../ui/input'
-import { fi } from 'date-fns/locale'
 
 export const NameInput = ({control, name}: RegistrationFieldProps) => {
   const {field, fieldState} = useController({ control, name})
