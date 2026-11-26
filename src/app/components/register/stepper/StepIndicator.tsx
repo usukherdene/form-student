@@ -10,7 +10,7 @@ type StepIndicatorProps = {
 
 export const StepIndicator = ({label, Icon, number, step}: StepIndicatorProps) => {
   return (
-    <div className="flex flex-col first:items-start items-center last:items-end text-white">
+    <div className="flex flex-col first:items-start last:items-end text-white">
       <span className={cn("size-8 rounded-full flex items-center justify-center text-[12px]", step >= number ? "bg-[#BE94FD] transform duration-300 text-black" : "bg-[#34253F] border border-[#E2E8F0]")}>
         {step > number ? <Check className="text-[#261432] size-4"/> : number}
         </span>
